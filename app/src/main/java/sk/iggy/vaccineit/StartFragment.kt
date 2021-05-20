@@ -27,14 +27,18 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.apply {
-            viewModel = sharedViewModel
-        }
-
-        binding.nextButton.setOnClickListener { goToNextScreen() }
+        binding.startFragment = this
     }
 
-    private fun goToNextScreen() {
-        findNavController().navigate(R.id.action_startFragment_to_userFormFragment)
+    fun goToNextScreen() {
+        val id = binding.idInput.text.toString()
+
+        if (id.length == 10) {
+            sharedViewModel.setId(id)
+            findNavController().navigate(R.id.action_startFragment_to_userFormFragment)
+        }
+        else {
+            binding.idInput.error = "Your Id must have 10 numbers."
+        }
     }
 }

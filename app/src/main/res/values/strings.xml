@@ -14,4 +14,13 @@
     <string name="email">E-mail</string>
     <string name="phone">Phone</string>
     <string name="date_of_birth">Date of birth</string>
+
+    <string name="user_id">ID: %s</string>
+    <string name="user_phone">Phone: %s</string>
+    <string name="user_email">E-mail: %s</string>
+    <string name="user_birthday">Birthday: %s</string>
+
+    <string name="user_vaccine">Vaccine: %s</string>
+    <string name="user_day_of_vaccination">Day of vaccination: %s</string>
+    <string name="user_status">Status: %s</string>
 </resources>

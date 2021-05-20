@@ -20,8 +20,8 @@ class UserViewModel: ViewModel() {
     private val _vaccineType = MutableLiveData("")
     val vaccineType: LiveData<String> get() = _vaccineType
 
-    private val _date = MutableLiveData("")
-    val date: LiveData<String> get() = _date
+    private val _birthday = MutableLiveData("")
+    val birthday: LiveData<String> get() = _birthday
 
     fun setId(userId: String) {
         if (userId.length == 10) {
@@ -41,7 +41,11 @@ class UserViewModel: ViewModel() {
         _phone.value = phone
     }
 
-    fun setDate(date: String) {
-        _date.value = date
+    fun setBirthday(date: String) {
+        _birthday.value = date
+    }
+
+    fun setVaccineType(vaccineType: String) {
+        _vaccineType.value = vaccineType
     }
 }
